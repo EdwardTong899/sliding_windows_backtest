@@ -72,7 +72,7 @@ def stop_position(time_str):  # 如果時間在  09:10~13:20 16:10~03:30 return 
 4. 主程式執行 def backtrace(stop_profit, stop_loss)
    - example: _1min_k[1] = ['2023-09-12 20:01', 16549.0, 16548.0] -> [time, high, low]
    - 輸入停利價格與停損價格 ex: backtrace(50, -50)就可以調用以上程式開始跑回測
-      ```shell
+```shell
        輸入停利價格與停損價格 ex: backtrace(50, -50)就可以調用以上程式開始跑回測 
        輸出格式 start date: 2023-09-12 20:01:37.117 
        end date: 2023-09-13 09:19:26.524 
@@ -86,7 +86,7 @@ def stop_position(time_str):  # 如果時間在  09:10~13:20 16:10~03:30 return 
        獲利: -133.0 
        淨獲利: -395.0 # 扣除開倉手續費 
        回測花費時間: 4.542853 秒 # 程式執行時間 
-```  
+``` 
 
 
 
