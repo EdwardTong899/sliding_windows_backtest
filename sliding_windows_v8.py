@@ -91,7 +91,7 @@ def trade_index(times):  # 輸入目前index，回傳做多 or 做空 or 不動�
         index = 1
     elif(now_price > upper and window_dir == 0): # 下降趨勢，但價格漲過高點
         # print("做空")
-        index = 0
+        index = -1
         
     return 2 if(k1 == [] or k2 == [] or  window_dir == 3) else index # 回傳交易方向
 
