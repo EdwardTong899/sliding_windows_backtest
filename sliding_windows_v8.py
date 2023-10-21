@@ -15,7 +15,7 @@ from datetime import datetime
 import json
 import os
 
-csv_file_path = 'D:/李老師/trade/result_data.txt'
+csv_file_path = 'D:/李老師/trade/result_data_test.txt'
 data = pd.read_csv(csv_file_path)
 # print(data.iloc[0, :])  # Print the first row
 
@@ -160,13 +160,13 @@ def backtrace(stop_profit, stop_loss):
         if(allowTrade == 0):
             print("隔時段平倉")
             for i in reversed(range(len(position_list))):
-                temp_profit = (position_list[i][0] - now_price) * position_list[i][1] # 倉位獲利
+                temp_profit = (now_price - position_list[i][0]) * position_list[i][1] # 倉位獲利
                 profit += temp_profit
                 del position_list[i]  # 刪除索引為 i 的元素
                 Next_day_clean_times += 1
         
         for i in reversed(range(len(position_list))):
-            temp_profit = (position_list[i][0] - now_price) * position_list[i][1] # 倉位獲利
+            temp_profit = (now_price - position_list[i][0]) * position_list[i][1] # 倉位獲利
             print(temp_profit)
             if(temp_profit > stop_profit): # 停利倉位
                 print("倉位停利---------------------------------------------------")
@@ -194,7 +194,7 @@ def backtrace(stop_profit, stop_loss):
         if(times == len(trade_price)-1):
             print("回測結束")
             for i in reversed(range(len(position_list))):
-                temp_profit = (position_list[i][0] - now_price) * position_list[i][1] # 倉位獲利
+                temp_profit = (now_price - position_list[i][0]) * position_list[i][1] # 倉位獲利
                 profit += temp_profit
                 del position_list[i]  # 刪除索引為 i 的元素
                 Next_day_clean_times += 1
@@ -293,17 +293,3 @@ def plot_profit_and_price(backtrace_parameter):
 
     # 顯示圖表
     plt.show()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
