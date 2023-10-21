@@ -71,8 +71,11 @@ def stop_position(time_str):  # 如果時間在  09:10~13:20 16:10~03:30 return 
 ```  
 4. 主程式執行 def backtrace(stop_profit, stop_loss)
        - 輸入停利價格與停損價格 ex: backtrace(50, -50)就可以調用以上程式開始跑回測
+          - 輸入停利價格與停損價格 ex: backtrace(50, -50)就可以調用以上程式開始跑回測
        - 輸出格式 start date: 2023-09-12 20:01:37.117
+   
        - end date: 2023-09-13 09:19:26.524
+   
        - 回測參數: 10~-10
        - 開倉次數: 131
        - 多倉次數: 69
