@@ -10,7 +10,7 @@
    - csv_file_path = 'D:/李老師/trade/result_data_test.txt'
   
 2. 組成1分K
-       - example: _1min_k[1] = ['2023-09-12 20:01', 16549.0, 16548.0] -> [time, high, low]
+   - example: _1min_k[1] = ['2023-09-12 20:01', 16549.0, 16548.0] -> [time, high, low]
 
 ```shell
 def cac_Kline():
